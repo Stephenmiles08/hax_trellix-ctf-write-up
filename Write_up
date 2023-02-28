@@ -1,0 +1,7 @@
+#We need to break free.
+The first challenge i was able to solve with 100 points is a web based challenge 'We need to break free'.
+Story line.
+Our large-scale scans of possible networked machines used by the opposite coast have produced an interesting result: an unprotected repository which bears the same telltale fingerprint of known enemy hosts. However, the contents of the repository appear to be arbitrary, lacking in any significance... A honeypot, perhaps? You'd better have a poke around this system, just to make sure.
+
+Going to the URL that was given(https://trellixhax-we-need-to-break-free.chals.io/), i was greeted with a black and white interface, an input asking to select a file name which does the function of checking the integrity of the whatsoever file, only if the file is present on the server in that particular directory. Attempting to put a valid file i understood that the program was vulnerable to COMMAND INJECTION, by adding ';' to tell the server i'm trying to end the first line of the command and parsing another command and adding ';ls' i was successfully able to inject shell code into the application,and the application outputted the list of that directory.
+After searching for the flag, i found the flag was located at '/app/flag/flag.txt' so using ';cat /app/flag/flag.txt' i was able to read the flag and solve the challenge.
